@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+make table-of-contents
+
+git status --short | awk '/README/ {print $2}' | xargs git add

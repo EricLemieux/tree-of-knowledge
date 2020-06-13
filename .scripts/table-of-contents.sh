@@ -33,7 +33,7 @@ function main() {
     | grep -P "^(?!\.)" \
     | md_link || echo "")
 
-  files=$(find "${dir}" -maxdepth 1 -type f -printf "%f\n" \
+  files=$(find "${dir}" -maxdepth 1 -type f -regex '.*\.md$' -printf "%f\n" \
     | grep -P "^(?!\.|_|README|Makefile).*$" \
     | md_link || echo "")
 
