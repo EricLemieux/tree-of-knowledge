@@ -11,7 +11,7 @@ function get_readable_name() {
 }
 
 function md_link() {
-    xargs -I{} echo "[{}]({})"
+  xargs -I{} echo "[{}]({})"
 }
 
 function main() {
